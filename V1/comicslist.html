@@ -1,0 +1,116 @@
+<!--
+    
+    Name: Timothy Ie
+    Class: CIS 155
+    Assignment: M02: Project V1 - Basic HTML and CSS
+    Date: May 7, 2020
+    This file serves as the index for comics that will be posted.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <metadata charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Timothy Ie Comics - Comics List</title>
+
+    <style>
+        header {
+            color:white;
+            font-weight:bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2>
+            Comics Archive
+        </h2>
+
+        
+
+        <!--
+            M1LO12 Create navigation using unordered lists
+
+            This navigation portion contains an unordered list linking to each
+            main page of the site. Each link is a list item, linked using the <a>
+            tag to list the source URL to which the link should lead.
+        -->
+
+        <nav>
+            
+            <ul>
+                <h4 style="font-family:cursive,sans-serif;">Navigation!</h4>
+                <li><a href=index.html>Home</a></li>
+                <li><a href=about.html>About</a></li>
+                <li><a href=comicslist.html>Comic List</a></li>
+            </ul>
+        </nav>
+        
+
+    </header>
+
+    <article>
+
+
+
+    <!--
+        M2LO6  Demonstrate a CSS id
+
+        In the below section, a "series-heading" id was assigned to this element.
+        This helps identify the element as the heading for the section for series comics,
+        in contrast to other headings.
+    -->
+
+    <section>
+        <h2 id="series-heading">Comic Series</h2>
+        <p>Ordered by date of last update, most recent first</p>
+        <!--
+            M1LO7 Demonstrate the use of ordered lists (HTML)
+
+            The following ordered list is used to organize this list of comic strips
+            by a default numbering system of 1, 2, 3, etc. In this particular case,
+            the comics will be sorted by date of last update. Because the numbering
+            will change frequently, especially if there's a large number of items
+            in the list, this list will not have explicitly defined values.
+        -->
+            <ol>
+                <li>Pop Culture Sidetracks</li>
+                <li>Pigeon</li>
+                <li>Two Chens</li>
+            </ol>
+    </section>
+        <h2 id="singlepage-heading">Single-Page Comics</h2>
+        <p>Ordered by date of upload</p>
+            <ol>
+                <li>Slither</li>
+                <li>Picture Games</li>
+            </ol>
+
+    <section>
+
+    </section>
+    </article>
+
+
+</br></br></br>
+<hr>
+
+<footer>
+    Updated May 2020 </br>
+    All original artwork and comics &copy; Timothy Ie
+</footer>
+        
+
+</body>
+
+</html>
