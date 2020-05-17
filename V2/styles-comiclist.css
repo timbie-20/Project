@@ -1,0 +1,99 @@
+/*
+    
+    Name: Timothy Ie
+    Assignment: M04: Project V2 - CSS for Layout and Graphic Design
+    Date: May 16, 2020
+    This file is a stylesheet for specifying additional styles unique
+    to the comics list.
+
+
+*/
+
+/*
+    M4LO2 Demonstrate the use of background images
+
+    The following style rule applies a background image to the heading box in the
+    comics list page, along with position and size indicators and a no-repeat 
+    indicator.
+*/
+
+/*
+    M4LO6 Demonstrate the use of opacity/transparency for images
+
+    This style rule also applies opacity to the heading box in the comic list,
+    including the text.
+
+*/
+
+div#heading-box {
+    position: relative;
+    left: 17%;
+    width: 1000px;
+    height: 300px;
+    background: url(comiclist-header-bg.jpg) 20% 30% / 1000px auto no-repeat;
+    opacity: 0.7;
+}
+
+/*
+    M3LO6 Demonstrate formatting a grid
+
+    These CSS rules (section and div) will divide page content on the "Comics List" page
+    into a grid, as outlined using the row and col divs on that HTML page. The div.row::after
+    rule helps clear floats on both sides to ensure that new rows are formatted properly. 
+    
+    The grid helps format the text in that section into a neat, clearly outlined box.
+
+*/
+
+/*
+    M3LO8B Demonstrate relative positioning
+
+    The relative position of the section described here allows for manipulation of its
+    position relative to the top of the article (in the body), which is its original 
+    position.
+*/
+
+/*
+    M4LO5 Demonstrate the use of text or box shadowing
+
+    A box shadow was put around the element containing the comics lists, giving it
+    an appearance of "floating" above the page.
+*/
+
+/*
+    M4LO3 Demonstrate the use of rounded corners for borders
+
+    This style also applies rounded corners to the box element with the comics lists.
+*/
+
+
+section#comics-list-table {
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 230px;
+    width: 60%;
+    display:grid;
+    border: 3px solid rgb(62, 183, 204);
+    box-shadow: black 10px 10px 23px;
+    border-radius: 5px;
+}
+
+div.row, div.row ol li {
+    text-align: center;
+}
+
+div.row::after{
+    clear: both;
+    content:"";
+    display: table;
+}
+
+div[class^="col-"] {
+    float: left;
+
+}
+
+div.col-1-2 {
+    width:50%;
+}

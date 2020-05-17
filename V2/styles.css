@@ -1,0 +1,287 @@
+@charset "uft-8";
+
+
+/*
+    
+    Name: Timothy Ie
+    Assignment: M04: Project V2 - CSS for Layout and Graphic Design
+    Date: May 16, 2020
+    This file is the default stylesheet to be used for the site, specifying default
+    element properties for certain types of elements in the document.
+
+
+*/
+
+/*
+    M2LO15 Apply colors using CSS
+
+    The following color for the HTML page background was chosen using the HSL
+    color model. The hue, saturation, and lightness were chosen in order to
+    grab a dark blue color.
+*/
+
+/*
+    M4LO4 Demonstrate the use of gradients
+
+    Here, a linear gradient is used to change the monochrome background to one that
+    gradually changes from dark blue on top to lighter on bottom. Any space extending 
+    beyond the footer just receives the regular monochrome background.
+*/
+
+html {
+    background: hsl(237, 40%, 35%);
+    background: linear-gradient(hsl(237, 40%, 35%), hsl(214, 53%, 70%));
+}
+
+body {
+
+    font-family: Arial, Verdana, "Times New Roman", sans-serif;
+    color:whitesmoke;
+    font-size:1em;
+
+    /* Web-safe fonts selected from WebSiteSetup.org <https://websitesetup.org/web-safe-fonts-html-css/> */
+
+}
+
+/*
+    M2LO7 Demonstrate a CSS attribute selector other than class or id
+
+    The following rule uses the alt text attribute to determine how images with
+    the "H-Clip Art" alt text should be sized.
+*/
+
+/*
+    M2LO12 Demonstrate how CSS can change presentation of page elements
+
+    Non-textual page elements like images can have properties like size altered.
+    In the example below, header images with a certain alt tag are set by this
+    style to have a fixed height of 250 px.
+*/
+
+header img[alt="H-Clip Art"] {
+    height:250px;
+}
+
+/*
+    M2LO3 Demonstrate style precedence and inheritance in CSS
+        
+    Precedence: as a more specific rule, the following style rule will cause h1 
+    text in the header to render with a different background color and text than
+    the rest of the body, of which it is a descendant.
+*/
+/*
+    M2LO5 Demonstrate contextual selectors
+
+    The following style rule demonstrates the child selector, where any
+    h1 element that is a child of the header, but not necessarily a
+    descendant of other sections like the body, will receive these rules.
+*/
+/*
+    M2LO14 Demonstrate and explain the use of progressive enhancement in CSS
+    
+    In the following style, there are two background color properties. Since some older browsers
+    may not support color transparency that's defined in the a value of the rgba model, an
+    alternative color is listed above it using simple rgb.
+*/
+
+header > h1 {
+    font-family: "Arial Black";
+    font-size:2em;
+    background-color: rgb(85, 105, 145);
+    background-color: rgba(85, 105, 145, 0.7);
+    
+}
+
+/*
+    M2LO11 Demonstrate a pseudo-element selector
+    
+    The pseudo-element selector for the first letter of an element is used
+    here. In this case it is used to enlarge the first letter of H1 headings in
+    the header.
+*/
+
+header > h1::first-letter {
+    font-size:1.6em;
+    font-style:initial;
+}
+
+
+h1 {
+    font-family: "Arial Black";
+    font-size:1.8em;
+}
+
+h2 {
+    font-family: "Verdana";
+    font-size:1.45em;
+    color:hsl(45,36%,71%);
+}
+
+/*
+    M3LO2 Demonstrate floating elements
+
+    Since I initially wanted the nav element to be floated to the right of the
+    page (for a more visually appealing navigation bar), the "float" property allows
+    me to do that by moving the box over to the right side of the parent (article in
+    most cases)
+*/
+
+nav {
+    display: block;
+    float: right;
+    width: 15%;
+    top: 10px;
+    box-shadow: black 7px 7px 15px;
+
+}
+
+/*
+    M2LO3 Demonstrate style precedence and inheritance in CSS
+        
+    Inheritance: because the following style rule for unordered lists does not specify a font 
+    family, unordered lists in the page body will inherit the default font 
+    family from the "body" rules above.
+*/
+
+ul {
+    background-color:rgb(170, 170, 91);
+    float: center;
+}
+
+ul > li {
+    display: block;
+    float: center;
+    text-align: center;
+}
+
+/*
+    M2LO13 Demonstrate how CSS can change presentation of textual elements
+
+    The style below applies a bolder font weight to elements whose class is designated
+    "page-intros". 
+*/
+
+.page-intros {
+    font-weight: bolder;
+}
+
+/*
+    M2LO11 Demonstrate a pseudo-class
+
+    The following style rule uses a specific type of pseudo-class for links, which
+    applies whenever a link on the page is being hovered over by the cursor. It 
+    turns the link light coral when the mouse is placed over the link. Because the
+    "a" selector here is not a descendant of anything, it will apply to all links
+    on the page.
+*/
+
+a:hover{
+    color:lightcoral;
+}
+
+
+/*
+    M3LO10 Demonstrate an overflow setting
+
+    As a comic page, the article of the body should extend as far down as necessary to
+    contain the page image inside, in order to enhance the reading experience (as opposed
+    to having an internal bounding box with its own scroller, which would make reading
+    difficult). Thus the "visible" overflow property and the lack of dimensions for the
+    article help accomplish this by expanding the article box as necessary.
+*/
+
+article {
+    overflow: visible;
+}
+
+
+
+/*
+    M2LO5 Demonstrate contextual selectors
+
+    The following style rule demonstrates the descendant selector, where these rules
+    apply to any hyperlink element that is a descendant of, or part of, an article element.
+    This will render each hyperlink in the font described.
+*/
+
+article a {
+    font-style:italic;
+    color:rgb(184, 77, 202);
+}
+
+aside a {
+    color:lavender;
+}
+
+/*
+    M3LO3 Demonstrate a clearing floats
+
+    This style rule makes sure that the article area is clear of floats (namely the nav
+    box) so that it can start when that area is clear, avoiding possible interference in 
+    case of different window sizes.
+*/
+
+section.page-holder{
+    display: block;
+    clear: both;
+    width: 90%;
+    position: static;
+}
+
+
+article img.comic-image {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 22%;
+    width: 50%;
+}
+
+figure#right-arrow {
+    position:absolute;
+    left:75%;
+    top: 800px;
+}
+
+/*
+    M3LO11 Demonstrate -prefix- style browser extensions use in CSS
+
+    The following rule includes a -webkit version and a regular version of the transform
+    function, for compatibility with older browsers.
+*/
+
+/*
+    M4LO8 Demonstrate the use of transformations for 2D or 3D images
+
+    When the right arrow on a page is hovered over, it "squishes". The transforms help
+    accomplish this. 
+*/
+
+figure#right-arrow:hover {
+    -webkit-transform: scale(1.3, 0.7);
+    transform: scale(1.3, 0.7);
+}
+
+p.comic-footnotes {
+    clear: both;
+    width: 40%;
+}
+
+/*
+    M3LO9 Demonstrate fixed, static, or inherited positioning
+
+    The following footer section uses static positioning to ensure that it
+    is not relocated relative to its bounding box, but rather that it is placed
+    where it normally would - near the bottom of the window.
+*/
+
+footer {
+    clear: both;
+    font-size:0.8em;
+    position:static;
+    bottom: 40px;
+}
+
+footer a {
+    color:hsl(90, 55%, 72%)
+}
