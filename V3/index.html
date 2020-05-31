@@ -1,0 +1,174 @@
+<!--
+    
+    Name: Timothy Ie
+    Class: CIS 155
+    Assignment: M06: Project V3 - Responsive Design and Tables
+    Date: May 30, 2020
+    This file serves as the home page for the website - the first page the user will see - and contains links to other pages in the site.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <metadata charset="utf-8">
+    <title>Timothy Ie Comics - Main Page</title>
+
+    <!--
+        M3LO1 Demonstrate the use of a CSS reset style sheet
+
+        The following element links the reset stylesheet "styles-reset.css" to
+        this html page. Because it is listed first, stylesheets listed after it
+        will take precedence- the expected result, since the reset sheet is primarily
+        there to clear browser defaults.
+    -->
+    <link href="styles-reset.css" rel="stylesheet" />
+    <!--
+        M1LO8 Demonstrate the use of external style sheets
+        
+        The following element links the stylesheet styles.css to this webpage, and
+        defines its relationship as "stylesheet". This will cause this page to 
+        adopt that sheet's styles unless overriden.
+    -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--
+        M2LO4 Demonstrate external, embedded, and inline styles:
+        
+        The following style element is an embedded style sheet that sets the font color 
+        and size for H2, for this particular document only.
+    -->
+
+    <style>
+        h2 {
+            color:rgb(153, 153, 153);
+            size:1.5em;
+        }
+
+
+        @media only screen and (min-width: 900px) {
+            header {
+                background: url(pencil-shavings.jpg) right center / auto 100% no-repeat;
+            }
+        }  
+    </style>
+</head>
+
+<body>
+
+
+    <header> 
+        <div>
+            <img class="header-image" src="pencil.png" alt="Welcome" width=150px; /> <img class="header-image" src="comic-effects.png" alt="H-Clip Art" />
+            <h1 style="color:lightseagreen; text-align:left">
+                Welcome to Timothy Ie's comic site!
+            </h1>
+
+            
+
+            
+            
+           
+
+        </div>
+    </header>
+
+    <hr>
+<article>
+    <!--
+        M2LO4 Demonstrate external, embedded, and inline styles:
+        In the line below, an inline style is used for the h1 heading that will appear
+        at the top of the page. This ensures that the specified styles are only 
+        applied to this particular heading.
+    -->
+
+    <nav id="main-nav">
+        <div class="nav-head-container">
+            <h4 style="font-family:cursive,sans-serif; text-align:center;">Navigation!</h4> 
+            <h4 class="tap-here" style="font-family:cursive,sans-serif; text-align:center;"> &nbsp; (tap here to expand)</h4>
+        </div>
+        <ul class="main-submenu">
+            <li><a href=index.html>Home</a></li>
+            <li><a href=about.html>About</a></li>
+            <li><a href=comicslist.html>Comic List</a></li>
+        </ul>
+    </nav>
+    
+
+
+    <h2>
+        About this site
+    </h2>
+
+
+    <!--
+        M2LO6  Demonstrate a class id
+
+        In the below section, a "page-intros" class was assigned to this element. Because each page
+        may have its own intro, an id rule (which applies to specific, unique elements) will not
+        work for these elements. Therefore, using a class will allow for new font rules to be applied
+        only to elements marked as such.
+    -->
+
+    <p id="site-intro" class="page-intros">
+        Welcome to Timothy Ie's comic site! Here you will find original comics by Timothy Ie.</br>
+        To be added soon!</br>
+    </p>
+    </br></br></br> 
+    <!--
+        M1LO13 Demonstrate using 3 types of hyperlinks
+
+        The hyperlink in the following line is directed towards a particular section of the About
+        page. Because the V1 section was given the id "V1", the fact that this link has a "#v1"
+        after the URL means it should automatically link to that section.
+
+    -->
+    <p>
+        To view V1 updates, click <a href="about.html#v1">here</a>.
+    </p>
+
+</article>
+</br></br></br>
+<hr>
+
+<!--
+        M1LO10 Demonstrate the use of special characters from extended character sets
+
+        The footnote below inserts the copyright symbol using its entity code, "&copy;",
+        which is one way to insert symbols and foreign characters into HTML pages. When the
+        page is rendered it correctly displays the copyright symbol.
+-->
+
+<footer>
+    Updated May 2020 </br>
+    All original artwork and comics &copy; Timothy Ie
+    <br>
+    <br>
+    <section style="font-size:0.9em">
+    Image credits:
+    <br>
+
+    <!--
+        M1LO13 Demonstrate using 3 types of hyperlinks
+
+        The following line contains hyperlinks to an external site, using two a elements with 
+        two links, one pointing to the image location and the other pointing to the artist's page. 
+    -->
+
+    Sound effects clip art: <a href="https://pixabay.com/illustrations/comic-halftone-speech-bubbles-frame-5102676/">Image</a> by <a href="https://pixabay.com/users/AnnaliseArt-7089643/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5102676">Annalise Batista</a> from Pixabay
+    <br>
+    Pencil photograph: Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=918449">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=918449">Pixabay</a>
+    </section>
+</footer>
+
+
+</body>
+
+
+
+</html>

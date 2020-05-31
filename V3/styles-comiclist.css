@@ -1,0 +1,162 @@
+/*
+    
+    Name: Timothy Ie
+    Assignment: M06: Project V3 - Responsive Design and Tables
+    Date: May 30, 2020
+    This file is a stylesheet for specifying additional styles unique
+    to the comics list.
+
+
+*/
+
+/*
+    M4LO2 Demonstrate the use of background images
+
+    The following style rule applies a background image to the heading box in the
+    comics list page, along with position and size indicators and a no-repeat 
+    indicator.
+*/
+
+/*
+    M4LO6 Demonstrate the use of opacity/transparency for images
+
+    This style rule also applies opacity to the heading box in the comic list,
+    including the text.
+
+*/
+
+div#heading-box {
+    position: relative;
+    left: 17%;
+    width: 1000px;
+    height: 300px;
+    background: url(comiclist-header-bg.jpg) 20% 30% / 1000px auto no-repeat;
+    opacity: 0.7;
+}
+
+div#heading-box h2 {
+    display: block; 
+    position: absolute;
+    left: 350px;
+    bottom: 20px; 
+    color: white; 
+    font-size: 3em;
+}
+
+/*
+    M3LO6 Demonstrate formatting a grid
+
+    These CSS rules (section and div) will divide page content on the "Comics List" page
+    into a grid, as outlined using the row and col divs on that HTML page. The div.row::after
+    rule helps clear floats on both sides to ensure that new rows are formatted properly. 
+    
+    The grid helps format the text in that section into a neat, clearly outlined box.
+
+*/
+
+
+/*
+    M4LO5 Demonstrate the use of text or box shadowing
+
+    A box shadow was put around the element containing the comics lists, giving it
+    an appearance of "floating" above the page.
+*/
+
+/*
+    M4LO3 Demonstrate the use of rounded corners for borders
+
+    This style also applies rounded corners to the box element with the comics lists.
+*/
+
+/* Grid Styles */
+section#comics-list-table {
+    display: block;
+    clear: right;
+    width: 60%;
+    min-width: 410px;
+    display:grid;
+    border: 3px solid rgb(62, 183, 204);
+    box-shadow: black 10px 10px 23px;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-right: 15px;
+}
+
+div.row, div.row ol li {
+    text-align: center;
+}
+
+div.row::after{
+    clear: both;
+    content:"";
+    display: table;
+}
+
+div[class^="col-"] {
+    float: left;
+
+}
+
+div.col-1-2 {
+    width:50%;
+}
+
+/* Comic Summary Table Styles */
+
+/*
+    M6LO7 Demonstrate how to format a table with CSS
+
+    The styles below define the table as a whole and its margins, the width of the individual
+    columns, and the background and border colors applied to the data and header cells.
+*/
+table#comic-summaries {
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 1050px;
+}
+
+table#comic-summaries col#name {
+    width: 20%;
+}
+
+table#comic-summaries col#last-update-date {
+    width: 15%;
+}
+
+th {
+    background: rgb(138, 46, 77)
+}
+
+th, td {
+    word-wrap: normal;
+    border: 3px outset salmon;
+    padding: 11px;
+}
+
+
+/* Other Media Styles */
+@media only screen and (max-width: 1200px) {
+    div#heading-box {
+        position: relative;
+        left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 99%;
+        height: 300px;
+        background: url(comiclist-header-bg.jpg) 20% 30% / 1000px auto no-repeat;
+        opacity: 0.7;
+    }
+
+    div#heading-box h2 {
+        position: relative;
+        text-align: center;
+    }
+
+    
+}
+
+@media only screen and (max-width: 480px) {
+    table#comic-summaries {
+        font-size: 0.8em;
+    }
+}
