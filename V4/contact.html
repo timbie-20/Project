@@ -1,0 +1,161 @@
+<!--
+    
+    Name: Timothy Ie
+    Class: CIS 155
+    Assignment: M06: Project V4 - Finalize Project
+    Date: June 15, 2020
+    This file serves as a place for others to contact the site owner by sending a message.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <metadata charset="utf-8">
+    <link href="styles-reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+
+
+    <title>Timothy Ie Comics - About Page - Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        header {
+            color:white;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Timothy Ie Comics</h1>
+        <br>
+        <br>
+
+        <hr>
+
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <hr>
+
+    </header>
+
+    <nav id="main-nav">
+        <h4 style="display:inline-flex; font-family:cursive,sans-serif; text-align:center;">Navigation! <h4 class="tap-here"
+             style="font-family:cursive,sans-serif; text-align:center;"> &nbsp; (tap here to expand)</h4></h4>
+        
+        <ul class="main-submenu">
+            <li><a href=index.html>Home</a></li>
+            <li><a href=about.html>About</a></li>
+            <li><a href=comicslist.html>Comic List</a></li>
+            <li><a href=contact.html>Contact</a></li>
+        </ul>
+    </nav>
+
+    <article style="background: linear-gradient(rgba(103, 150, 109, 0.397) 10%, rgb(71, 67, 128) 90%);" >
+        <h2>Contact Form</h2>
+        <br>
+        <p style="width: 40%;">If you have any questions or comments about my work or the site, or if you are a publisher or fellow artist with a business inquiry,
+            please submit them here using the form below.
+        </p>
+
+        <form id="contact-me" method="post" style="background-color: rgb(96, 94, 126);">
+            <script src="ticomics_formsubmit.js"></script>
+            <fieldset>
+
+                <!-- M7LO5 Demonstrate the use of a text box in a form
+
+                     Some of these fields require text to be input, to include the name, email, and website
+                     of the person inquiring. 
+                -->
+                <div class="formRow">
+                    <label for="name">Name*:</label>
+                    <input name="inquirerName" id="name" type="text" maxlength="100" required/>
+                </div>
+
+                <div class="formRow">
+                    <label for="email">E-mail*:</label>
+                    <input name="inquirerEmail" id="email" type="email" required/>
+                </div>
+
+                <div class="formRow">
+                    <label for="website">Website:</label>
+                    <input name="inquirerWeb" id="website" type="url" />
+                </div>
+
+                <!-- M7LO8 Demonstrate the use of a selection list in a form
+                    
+                    This selection list allows the user to select from a predefined list of
+                    reasons for inquiring.
+                -->
+                <div class="formRow">
+                    <label for="reason">What would you like to contact me about?</label>
+                    <select name="inquirerWeb" id="reason">
+                        <option value="reason1">Question</option>
+                        <option value="reason2">Suggestion / Feedback</option>
+                        <option value="reason3">Business Inquiry</option>
+                        <option value="reason4">Other...</option>
+                    </select>
+                </div>
+                <br>
+                <br>
+
+                <!--
+                    M7LO9 Demonstrate the use of a text area in a form
+
+                    This extended text area box allows the user to input their message.
+                -->
+                <div class="formRow">
+                    <label for="message">Enter your message here*: </label>
+                    <br>
+                    <textarea cols="55" rows="10" name="inquirerMessage" id="message" required>
+                    </textarea>
+                </div>
+
+                <br>
+                <p style="font-size: 0.8em;">* = Indicates required field</p>
+
+
+                <!--
+                    M7LO10 Demonstrate the use of a submit button in a form
+
+                    Included are submit and reset buttons that allow the user to either
+                    submit their responses or clear the fields.
+                -->
+                <div id="formButtons">
+                    <input type="submit" value="Submit" />
+                    <input type="reset" value="Clear Fields" />
+                </div>
+                
+                
+            </fieldset>
+            
+
+
+        </form>
+
+        
+    </article>
+
+    <footer>
+    <hr>
+    <br>
+        Updated June 2020 </br>
+        All original artwork and comics &copy; Timothy Ie
+        <br>
+        <br>
+        
+    </footer>
+
+
+</body>
+
+</html>

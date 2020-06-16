@@ -1,0 +1,221 @@
+<!--
+    
+    Name: Timothy Ie
+    Class: CIS 155
+    Assignment: M06: Project V4 - Finalize Project
+    Date: June 15, 2020
+    This file serves as the index for comics that will be posted.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <metadata charset="utf-8">
+    <link href="styles-reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="styles-comiclist.css" rel="stylesheet" />
+    
+
+    <title>Timothy Ie Comics - Comics List</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        header {
+            color:white;
+            font-weight:bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Timothy Ie Comics</h1>
+        <br>
+        <br>
+
+        <hr>
+
+
+        <h2>
+            Comics Archive
+        </h2>
+
+    
+        
+
+    </header>
+
+    <hr>
+    <article>
+
+
+        <!--
+            M1LO12 Create navigation using unordered lists
+
+            This navigation portion contains an unordered list linking to each
+            main page of the site. Each link is a list item, linked using the <a>
+            tag to list the source URL to which the link should lead.
+        -->
+
+        <div id="heading-box">
+            <h2>
+                Comics List
+            </h2>
+        </div>
+
+        <nav id="main-nav">
+            <h4 style="display:inline-flex; font-family:cursive,sans-serif; text-align:center;">Navigation! <h4 class="tap-here"
+                 style="font-family:cursive,sans-serif; text-align:center;"> &nbsp; (tap here to expand)</h4></h4>
+            
+            <ul class="main-submenu">
+                <li><a href=index.html>Home</a></li>
+                <li><a href=about.html>About</a></li>
+                <li><a href=comicslist.html>Comic List</a></li>
+                <li><a href=contact.html>Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--
+            M2LO6  Demonstrate a CSS id
+
+            In the below section, a "series-heading" id was assigned to this element.
+            This helps identify the element as the heading for the section for series comics,
+            in contrast to other headings.
+        -->
+
+        <section id="comics-list-table">
+            <div id="list-table-headings" class="row">
+                <div class="col-1-2">
+                    <h2 id="series-heading">Comic Series</h2>
+                </div>
+                <div class="col-1-2">
+                    <h2 id="singlestory-heading">Single-Story Comics</h2>
+                </div>
+            </div>
+            <div id="table-lists" class="row">
+                <div class="col-1-2">
+                <p>Ordered by date of last update, most recent first</p>
+                <!--
+                    M1LO7 Demonstrate the use of ordered lists (HTML)
+
+                    The following ordered list is used to organize this list of comic strips
+                    by a default numbering system of 1, 2, 3, etc. In this particular case,
+                    the comics will be sorted by date of last update. Because the numbering
+                    will change frequently, especially if there's a large number of items
+                    in the list, this list will not have explicitly defined values.
+                -->
+                    <ol style="text-align: left;">
+                        <li><a href="pop-culture-asides-page1.html">Pop Culture Asides</a></li>
+                        <li>Pigeon</li>
+                        <li>Two Chens</li>
+                    </ol>
+                </div>
+            
+                <div class="col-1-2">
+                <p>Ordered by date of upload</p>
+                    <ol style="text-align: left;">
+                        <li>Slither</li>
+                        <li>Picture Games</li>
+                    </ol>
+                </div>
+            </div>
+    
+
+        </section>
+
+        <section>
+            <h2 style="clear: both; margin-top: 70px;">Comic Summaries</h2>
+            
+            <!-- M6LO3 Demonstrate how to create a table
+
+                This table houses the summaries of the comics that are going to be on the site.
+                It makes use of a caption, columns with certain ID's, etc. It also uses th cells
+                to separate the single-story strips from the comic series; other cells for housing data
+                are stored in td cells. Additionally, it uses header cells for the labels that apply
+                to all columns ("Comic Name", "Summary", and "Last Updated").
+
+
+            -->
+
+
+            <table id="comic-summaries">
+                <caption>Comic Summaries</caption>
+                <colgroup> 
+                    <col id="name"/>
+                    <col id="summary"/>
+                    <col id="last-update-date"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Comic Name</th>
+                        <th>Summary</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="3">Comic Series</th>
+                    </tr>
+                    <tr>
+                        <td>Pop Culture Asides</td>
+                        <td>Small strips playing off pop-culture works and tropes. Everything from Marvel to Disney to NBC sitcoms.</td>
+                        <td>May 16, 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Pigeon</td>
+                        <td>Little (mis)adventures of Lumby, a small city pigeon, spending his time flying around, looking for birdseed, and observing humans.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Two Chens <i>(Working Title)</i></td>
+                        <td>Day-to-day life of two Asian-American brothers, Noah and Chowie, talking about food, school, books, TV, and life in general.</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <!-- M6LO4 Demonstrate how to span multiple rows or multiple columns in a table
+
+                            The header cells to distinguish the single-story comics from the comic series span
+                            all columns, in order to act as "secondary header" cells.
+
+                        -->
+                        <th colspan="3">Single-Story Comics</th>
+                    </tr>
+                    <tr>
+                        <td>Slither</td>
+                        <td>Blip, a salamander, tries to navigate his way through a Pacific Northwest backyard and to his home on the other side of a house. That
+                            dog isn't making things easy, though.
+                        </td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Picture Games <i>(Working Title)</i></td>
+                        <td>A rowdy group of animals play a game by telling stories. Their friend Penguin is a little too busy at the moment, though...</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </article>
+
+
+</br></br></br>
+<hr>
+
+<footer>
+    Updated June 2020 </br>
+    All original artwork and comics &copy; Timothy Ie
+</footer>
+        
+
+</body>
+
+</html>

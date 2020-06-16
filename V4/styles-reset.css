@@ -1,0 +1,22 @@
+@charset "uft-8";
+
+/*
+    
+    Name: Timothy Ie
+    Assignment: M06: Project V3 - Responsive Design and Tables
+    Date: May 30, 2020
+    This file is the reset stylesheet to be used for the site, which will clear
+    the default rules set by the user's browser, allowing all pages on the site
+    to have a consistent starting point regarding styles.
+
+*/
+
+html, header, body, footer, div, h1, h2,
+h3, h4, h5, h6  {
+    display:block;
+    background:transparent;
+}
+
+a {
+    text-decoration:none;
+}
